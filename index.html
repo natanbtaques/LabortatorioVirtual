@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    
+  <script id="3Dtree" src="https://cdn.glitch.com/9612a838-2400-4d8a-a4f4-fafa32fd7bff%2FGenericTree%206.3ds?1534085897352"></script>
+    <script id="earthTexture" src="https://cdn.glitch.com/9612a838-2400-4d8a-a4f4-fafa32fd7bff%2Fearthmap1k.jpg?1533687602127"></script>
+    <script> id="SunTexture" src="https://www.dlr.de/next/portaldata/69/Resources/flash/popup/sonnensystem/content/texture_sun_prev.jpg"</script>
+  </head>
+ <body >
+  <a-scene>
+  <a-entity>
+      
+    
+      <a-entity position="0 0 -2" rotation="0 180 0">
+      <!--planeta girando-->
+       <a-entity position="0 5 0" rotation="0 0 0" scale="15 15 15">
+        
+        <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="5000" fill="forwards" easing="linear" repeat="indefinite"></a-animation>
+        
+        <a-sphere position="0 0 1" scale="0.05 0.05 0.05" material= "src:https://cdn.glitch.com/9612a838-2400-4d8a-a4f4-fafa32fd7bff%2Fearthmap1k.jpg?1533687602127" rotation="0 0 0">
+          
+          <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite" easing="linear"></a-animation>
+          
+          <a-root>
+          <a-entity geometry="primitive: sphere;
+                              radius: 0.85;
+                              segmentsWidth: 36;
+                              segmentsHeight: 18;
+                              translate: 0 0 0" 
+                    material="color: blue;
+                              opacity: 1.0;
+                              shader: standard;
+                              transparent: false;
+                              metalness: 0.0;
+                              roughness: 0.5;"></a-entity> 
+          </a-root>
+        </a-sphere>
+      </a-entity>
+  
+      /<!--planeta-->
+      <a-entity id="Earth" geometry="primitive: sphere; radius: 5" position="12 20 50"
+                  material="src:#earthTexture">
+        <a-animation attribute="rotation"
+               dur="3700"
+               fill="backwards"
+               to="0 360 0"
+               repeat="indefinite">
+              </a-animation>
+        </a-entity> 
+      
+      <!--placa apresentacao-->
+      <a-text value="APRESENTACAO CAMPUS PARTY 2019" position="2.3 2.5 0" rotation="0 180 0"></a-text>
+      <a-box id="placa" color="#6C3483" depth="0.7" height="4" width="0.1" position=".37 2.5 .1" rotation="90 90 0"></a-box>  
+      <a-cylinder color="crimson" height="4.5" radius=".1" position="-1 0 .1"></a-cylinder>
+      <a-cylinder color="crimson" height="4.5" radius=".1" position="1.7 0 .1"></a-cylinder>
+
+
+
+     
+       <a-entity id="chao" geometry="primitive: plane; height: 100; width: 100" material="color:#CEF6CE" rotation="-90 180 0"></a-entity>
+      <a-sky color="#01A9DB"></a-sky>
+      
+     <!-- TAPETE ENTRADA-->
+      <a-plane id="chao1" geometry="primitive: plane; height: 12; width: 12" material="src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIVVm9ccBP92D9dhWfW-36ZSqyTKC21nFvpkCeBrqNz75cI6a3vg" position="0 .01 6" rotation="-90 180 0"></a-plane>
+      
+     <!--grama entrada-->
+        <a-box id="basedaarvore" color=" #FFFFFF" depth="0.3" height="2.5" width="0.7" position="6 8 6" rotation="90 0 0" ></a-box> 
+        <a-box id="basedaarvor1e" color=" #FFFFFF" depth="0.3" height="2.5" width="0.7" position="-6 8 8" rotation="90 0 0" ></a-box> 
+        <a-box id="basedaarvore1" color=" #FFFFFF" depth="0.3" height="2.5" width="0.7" position="-6 8 0" rotation="120 0 0" ></a-box> 
+
+    <!--CILINDROS-->
+      <a-cylinder color="crimson" height="3" radius="0.7" position="-8 1.3 15"></a-cylinder>
+      <a-cylinder color="white" height="3" radius="0.7" position="-8 4.3 15"></a-cylinder>
+      <a-cylinder color="crimson" height="3" radius="0.7" position="-8 7.3 15"></a-cylinder>
+      <a-cylinder color="white" height="3" radius="0.7" position="-8 10.3 15"></a-cylinder>
+      <a-cylinder color="crimson" height="3" radius="0.65" position="-8 13.3 15"></a-cylinder>
+      <a-cylinder color="white" height="3" radius="0.6" position="-8 16.3 15"></a-cylinder>
+      <a-cylinder color="crimson" height="3" radius="0.5" position="-8 19.3 15"></a-cylinder>
+      <a-cylinder color="white" height="3" radius="0.5" position="-8 22.3 15"></a-cylinder>
+      <a-cylinder color="crimson" height="3" radius="0.5" position="-8 25.3 15"></a-cylinder>
+
+
+
+
+
+      
+      <a-entity id="9" >
+      <!--BASE FOLHAS-->
+        <a-box id="basedaarvor12e" color="#3B170B" depth="0.7" height="2.5" width="0.7" position="5 0 0"></a-box>  
+        <a-box id="topoarvore1" color="#01DF3A" depth=".7" height=".7" width="3" position="5 1.6 0"></a-box>
+        <a-box id="topoarvore2" color="#01DF3A" depth=".7" height=".7" width="2" position="5 1.6 0.7"></a-box>
+        <a-box id="topoarvore3" color="#01DF3A" depth=".7" height=".7" width="2" position="5 1.6 -0.7"></a-box>
+        <a-box id="topoarvore4" color="#01DF3A" depth=".7" height=".7" width="3" position="5 1.6 0" rotation="0 90 0"></a-box>
+      <!--TETO FOLHAS-->
+        <a-box id="arvore1" color="#01DF3A" depth=".7" height=".7" width="2" position="5 2.3 0"></a-box>
+        <a-box id="arvore2" color="#01DF3A" depth=".7" height=".7" width="1" position="5 2.3 0.7"></a-box>
+        <a-box id="arvore3" color="#01DF3A" depth=".7" height=".7" width="1" position="5 2.3 -0.7"></a-box>
+        <a-box id="arvore4" color="#01DF3A" depth=".7" height=".7" width="2" position="5 2.3 0" rotation="0 90 0"></a-box>
+        <a-box id="arvore5" color="#01DF3A" depth=".7" height=".7" width=".7" position="5 3 0" rotation="0 90 0"></a-box>
+      </a-entity>
+      <!--BASE FOLHAS 2-->
+        <a-box id="basedaarvore32" color="#3B170B" depth="0.7" height="2.5" width="0.7" position="4 0 4"></a-box>  
+        <a-box id="topoarvore13" color="#01DF3A" depth=".7" height=".7" width="3" position="4 1.6 4"></a-box>
+        <a-box id="topoarvore23" color="#01DF3A" depth=".7" height=".7" width="2" position="4 1.6 4.7"></a-box>
+        <a-box id="topoarvore33" color="#01DF3A" depth=".7" height=".7" width="2" position="4 1.6 4.7"></a-box>
+        <a-box id="topoarvore43" color="#01DF3A" depth=".7" height=".7" width="3" position="4 1.6 4" rotation="0 90 0"></a-box>
+      <!--TETO FOLHAS-->
+        <a-box id="arvore13" color="#01DF3A" depth=".7" height=".7" width="2" position="4 2.3 4"></a-box>
+        <a-box id="arvore23" color="#01DF3A" depth=".7" height=".7" width="1" position="4 2.3 4.7"></a-box>
+        <a-box id="arvore33" color="#01DF3A" depth=".7" height=".7" width="1" position="4 2.3 4.7"></a-box>
+        <a-box id="arvore43" color="#01DF3A" depth=".7" height=".7" width="2" position="4 2.3 4" rotation="0 90 0"></a-box>
+        <a-box id="arvore53" color="#01DF3A" depth=".7" height=".7" width=".7" position="4 3 4" rotation="0 90 0"></a-box>
+      
+     <!--ARVORE 3-->
+        <a-box id="basedaarvore11" color="#3B170B" depth="0.7" height="2.5" width="0.7" position="-4 0 0"></a-box>  
+        <a-box id="topoarvore11" color="#01DF3A" depth=".7" height=".7" width="3" position="-4 1.6 0"></a-box>
+        <a-box id="topoarvore21" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 1.6 0.7"></a-box>
+        <a-box id="topoarvore31" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 1.6 -0.7"></a-box>
+        <a-box id="topoarvore41" color="#01DF3A" depth=".7" height=".7" width="3" position="-4 1.6 0" rotation="0 90 0"></a-box>
+      <!--TETO FOLHAS-->
+        <a-box id="arvore112" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 2.3 0"></a-box>
+        <a-box id="arvore223" color="#01DF3A" depth=".7" height=".7" width="1" position="-4 2.3 0.7"></a-box>
+        <a-box id="arvore321" color="#01DF3A" depth=".7" height=".7" width="1" position="-4 2.3 -0.7"></a-box>
+        <a-box id="arvore421" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 2.3 0" rotation="0 90 0"></a-box>
+        <a-box id="arvore521" color="#01DF3A" depth=".7" height=".7" width=".7" position="-4 3 0" rotation="0 90 0"></a-box>
+      
+      <!--ARVORE 3-->
+      
+        <a-box id="basedaarvore121" color="#3B170B" depth="0.7" height="2.5" width="0.7" position="-4 0 9"></a-box>  
+        <a-box id="topoarvore111" color="#01DF3A" depth=".7" height=".7" width="3" position="-4 1.6 9"></a-box>
+        <a-box id="topoarvore211" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 1.6 9.7"></a-box>
+        <a-box id="topoarvore311" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 1.6 9.7"></a-box>
+        <a-box id="topoarvore4121" color="#01DF3A" depth=".7" height=".7" width="3" position="-4 1.6 9" rotation="0 90 0"></a-box>
+      <!--TETO FOLHAS-->
+        <a-box id="arvore1121" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 2.3 9"></a-box>
+        <a-box id="arvore2231" color="#01DF3A" depth=".7" height=".7" width="1" position="-4 2.3 9.7"></a-box>
+        <a-box id="arvore4211" color="#01DF3A" depth=".7" height=".7" width="2" position="-4 2.3 9" rotation="0 90 0"></a-box>
+        <a-box id="arvore5211" color="#01DF3A" depth=".7" height=".7" width=".7" position="-4 3 9" rotation="0 90 0"></a-box>
+      
+     <!--CERCADINHO-->
+      
+        <a-box id="cerca" color="#82803B" depth="0.1" height="1.2" width="5" position="3.5 0 0.4" rotation="0 180 0"></a-box>
+        <a-entity id="cerca3" material= "color: #82803B" geometry="depth:0.1 ;height:1.2; width: 6" position="-3 0 0.4" rotation="0 180 0"></a-entity>
+        <a-entity id="cerca1" material= "color: #82803B" geometry="depth:0.1 ;height:1.2; width:12" position="0 0 12" rotation="0 180 0"></a-entity>
+        <a-entity id="parede 2" material= "color: #82803B" geometry="depth:0.1 ;height:1.2; width: 11.6" position="-6 0 6.2" rotation="0 90 0"></a-entity>
+        <a-entity id="parede 3" material= "color: #82803B" geometry="depth:0.1 ;height:1.2; width:11.6" position="6 0 6.2" rotation="0 90 0"></a-entity>
+      
+        <a-entity id="9-3" position="-0.18567 0 9.44795">
+      <!--BASE FOLHAS-->
+        <a-box id="basedaarvor12e" color="#3B170B" depth="0.7" height="2.5" width="0.7" position="5 0 0" material="" geometry=""></a-box>  
+        <a-box id="topoarvore1" color="#01DF3A" depth=".7" height=".7" width="3" position="5 1.6 0" material="" geometry=""></a-box>
+        <a-box id="topoarvore2" color="#01DF3A" depth=".7" height=".7" width="2" position="5 1.6 0.7" material="" geometry=""></a-box>
+        <a-box id="topoarvore3" color="#01DF3A" depth=".7" height=".7" width="2" position="5 1.6 -0.7" material="" geometry=""></a-box>
+        <a-box id="topoarvore4" color="#01DF3A" depth=".7" height=".7" width="3" position="5 1.6 0" rotation="0 90 0" material="" geometry=""></a-box>
+      <!--TETO FOLHAS-->
+        <a-box id="arvore1" color="#01DF3A" depth=".7" height=".7" width="2" position="5 2.3 0" material="" geometry=""></a-box>
+        <a-box id="arvore2" color="#01DF3A" depth=".7" height=".7" width="1" position="5 2.3 0.7" material="" geometry=""></a-box>
+        <a-box id="arvore3" color="#01DF3A" depth=".7" height=".7" width="1" position="5 2.3 -0.7" material="" geometry=""></a-box>
+        <a-box id="arvore4" color="#01DF3A" depth=".7" height=".7" width="2" position="5 2.3 0" rotation="0 90 0" material="" geometry=""></a-box>
+        <a-box id="arvore5" color="#01DF3A" depth=".7" height=".7" width=".7" position="5 3 0" rotation="0 90 0" material="" geometry=""></a-box>
+      </a-entity>
+     
+      </a-entity>
+       </a-entity>
+       
+        
+    </a-scene>
+   
+</body>
+
+</html>
